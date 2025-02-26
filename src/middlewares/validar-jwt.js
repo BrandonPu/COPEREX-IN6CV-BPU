@@ -30,7 +30,7 @@ export const validarJWT = async (req, res, next) => {
 
         if (usuario.role !== "ADMIN_ROLE") {
             return res.status(403).json({
-                msg: "No tiene permisos para realizar esta acción"
+                msg: "No tiene permisos para realizar esta acción Solo el administrador puede realizar cambios"
             });
         }
 
