@@ -5,6 +5,9 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
+import limiter from "../src/middlewares/validar-cant-peticiones.js"
+import authRouters from "../src/auth/auth.routes.js"
+import { createAdminUser} from "../src/users/user.controller.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}));
@@ -12,10 +15,11 @@ const middlewares = (app) => {
     app.use(express.json());
     app.use(helmet());
     app.use(morgan('dev'));
+    app.use(limiter);
 }
 
 const routes = (app) => {
-
+    app.use("/interferSystem/v1/auth", authRouters);
 }
 
 const conectarDB = async() => {
@@ -34,7 +38,8 @@ export const initServer = async() => {
 
     try {
         middlewares(app);
-        conectarDB();
+        await conectarDB(); 
+        await createAdminUser();
         routes(app);
         app.listen(port);
         console.log(`Server running on port: ${port}`);
