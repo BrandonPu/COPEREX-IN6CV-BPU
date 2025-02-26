@@ -8,6 +8,7 @@ import { dbConnection } from './mongo.js';
 import limiter from "../src/middlewares/validar-cant-peticiones.js"
 import authRouters from "../src/auth/auth.routes.js"
 import { createAdminUser} from "../src/users/user.controller.js"
+import companyRoutes from "../src/company/company.routes.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}));
@@ -20,6 +21,7 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use("/interferSystem/v1/auth", authRouters);
+    app.use("/interferSystem/v1/company", companyRoutes);
 }
 
 const conectarDB = async() => {
