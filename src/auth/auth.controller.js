@@ -4,6 +4,7 @@ import { generarJWT } from "../helpers/generate-jwt.js"
 
 export const login = async (req, res) => {
 
+    //No hay register de parte de BrandonPu
     const { email, password, username } = req.body;
 
     try {
