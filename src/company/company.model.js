@@ -21,6 +21,18 @@ const CompanySchema = Schema(
         },
         businessCategory: {
             type: String,
+            enum: [
+                'Tecnologia',
+                'Alimentos',
+                'Moda',
+                'Construccion',
+                'Energia-renovable',
+                'Turismo',
+                'Salud',
+                'Educacion',
+                'Logistica',
+                'Artesania'
+            ],
             required: true
         },
         estado: {

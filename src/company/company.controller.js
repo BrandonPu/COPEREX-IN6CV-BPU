@@ -1,5 +1,30 @@
 import { response, request } from "express";
 import Company from "./company.model.js";
+import validateCategory from "../middlewares/validateCategory.js"
+
+export const getCompanies = async (req, res) => {
+    try {
+        const query = { estado: true };
+
+        const [total, companies] = await Promise.all([
+            Company.countDocuments(query),
+            Company.find(query, "nameCompany descriptionCompany impactLevel yearsExperience businessCategory estado _id")
+        ]);
+
+        res.status(200).json({
+            success: true,
+            total,
+            companies
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: "Error al obtener las empresas",
+            error
+        });
+    }
+};
+
 
 export const createCompany = async (req, res) => {
     try {
@@ -48,6 +73,35 @@ export const createCompany = async (req, res) => {
 
         return res.status(500).json({
             message: "Error al registrar la empresa",
+            error: error.message,
+        });
+    }
+};
+
+
+export const getCompaniesByYearsExperience = async (req, res) => {
+    try {
+        const { yearsExperience } = req.params;
+        const years = parseInt(yearsExperience);
+
+        if (isNaN(years)) {
+            return res.status(400).json({
+                message: "El parámetro para buscar por Años de experiencia debe ser un número válido",
+            });
+        }
+
+        const companies = await Company.find({ yearsExperience: years });
+
+        if (companies.length === 0) {
+            return res.status(404).json({
+                message: `No se encontraron empresas con ${years} años de experiencia`,
+            });
+        }
+
+        return res.status(200).json({ companies });
+    } catch (error) {
+        return res.status(500).json({
+            message: "Error al obtener las empresas",
             error: error.message,
         });
     }
