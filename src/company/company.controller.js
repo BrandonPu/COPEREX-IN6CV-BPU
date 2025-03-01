@@ -106,3 +106,103 @@ export const getCompaniesByYearsExperience = async (req, res) => {
         });
     }
 };
+
+export const getCompaniesByCategory = async (req, res) => {
+    try {
+        const { businessCategory } = req.params;
+
+        if (!businessCategory) {
+            return res.status(400).json({
+                message: "El parámetro para buscar por Categoría de negocio es requerido",
+            });
+        }
+
+        const companies = await Company.find({ businessCategory });
+
+        if (companies.length === 0) {
+            return res.status(404).json({
+                message: `No se encontraron empresas con la categoría de negocio: ${businessCategory}`,
+            });
+        }
+
+        return res.status(200).json({ companies });
+    } catch (error) {
+        return res.status(500).json({
+            message: "Error al obtener las empresas",
+            error: error.message,
+        });
+    }
+};
+
+export const getCompaniesByName = async (req, res) => {
+    try {
+        const { order } = req.query;
+        let sortOrder = 1;
+
+        if (order && order.toLowerCase() === 'desc') {
+            sortOrder = -1;
+        }
+
+        const companies = await Company.find().sort({ nameCompany: sortOrder });
+
+        if (companies.length === 0) {
+            return res.status(404).json({
+                message: "No se encontraron empresas",
+            });
+        }
+
+        return res.status(200).json({ companies });
+
+    } catch (error) {
+        return res.status(500).json({
+            message: "Error al obtener las empresas",
+            error: error.message,
+        });
+    }
+};
+
+
+export const updateCompanyById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { nameCompany, descriptionCompany, impactLevel, yearsExperience, businessCategory } = req.body;
+
+        const company = await Company.findById(id);
+        if (!company) {
+            return res.status(404).json({
+                message: "Empresa no encontrada",
+            });
+        }
+
+        const existingCompany = await Company.findOne({
+            nameCompany,
+            _id: { $ne: id } 
+        });
+        if (existingCompany) {
+            return res.status(400).json({
+                message: "El nombre de la empresa ya está en uso",
+                error: "Duplicado",
+            });
+        }
+
+        company.nameCompany = nameCompany || company.nameCompany;
+        company.descriptionCompany = descriptionCompany || company.descriptionCompany;
+        company.impactLevel = impactLevel || company.impactLevel;
+        company.yearsExperience = yearsExperience || company.yearsExperience;
+        company.businessCategory = businessCategory || company.businessCategory;
+
+        await company.save();
+
+        return res.status(200).json({
+            message: "Empresa actualizada exitosamente",
+            company,
+        });
+    } catch (error) {
+        console.log(error);
+
+        return res.status(500).json({
+            message: "Error al actualizar la empresa",
+            error: error.message,
+        });
+    }
+};

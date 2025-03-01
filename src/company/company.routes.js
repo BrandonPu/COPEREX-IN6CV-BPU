@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { getCompanies, createCompany ,getCompaniesByYearsExperience } from "./company.controller.js";
+import { updateCompanyById, getCompanies, createCompany ,getCompaniesByYearsExperience, getCompaniesByCategory, getCompaniesByName} from "./company.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import validateCategory from "../middlewares/validateCategory.js";
@@ -15,7 +15,23 @@ router.get(
     validarJWT,
     ],
     getCompaniesByYearsExperience
-)
+);
+
+router.get(
+    "/category/:businessCategory",
+    [
+    validarJWT,
+    ],
+    getCompaniesByCategory
+);
+
+router.get(
+    "/companies",
+    [
+        validarJWT,
+    ],
+    getCompaniesByName
+);
 
 router.post(
     "/",
@@ -25,5 +41,16 @@ router.post(
         validarCampos
     ],
     createCompany
-)
+);
+
+router.put(
+    "/:id",
+    [
+        validarJWT,
+        validateCategory,
+        validarCampos, 
+    ],
+    updateCompanyById
+);
+
 export default router;
