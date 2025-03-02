@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "e24db300-3b68-4b5f-8025-fa0277ec9ec2",
+		"name": "Operex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37413624"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@system.com\",\r\n    \"password\": \"admin2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewCompany",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxZTkzM2RmM2Y5YzFlMWE0NWM2ZjUiLCJpYXQiOjE3NDA3NjE2NzYsImV4cCI6MTc0MDc2ODg3Nn0.JGJBww-A-cXeGbYVUH8ULfZk8QQzyskV3_sxmn8rHC8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameCompany\": \"Booking.com\",\r\n    \"descriptionCompany\": \"Plataforma de reservas de alojamiento a nivel mundial\",\r\n    \"impactLevel\": \"Bajo\",\r\n    \"yearsExperience\": 25,\r\n    \"businessCategory\": \"Turismo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/company/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"company",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCompanies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxZTkzM2RmM2Y5YzFlMWE0NWM2ZjUiLCJpYXQiOjE3NDA3OTg4MzAsImV4cCI6MTc0MDgwNjAzMH0.sBcczizd-YFXhrcizqhxX-XJfEqsqB5ftpCEjcXtmLI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/company/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"company",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CompaniesByYearsExperience",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxZTkzM2RmM2Y5YzFlMWE0NWM2ZjUiLCJpYXQiOjE3NDA3NjE2NzYsImV4cCI6MTc0MDc2ODg3Nn0.JGJBww-A-cXeGbYVUH8ULfZk8QQzyskV3_sxmn8rHC8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/company/experience/60",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"company",
+						"experience",
+						"60"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CompaniesByCategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxZTkzM2RmM2Y5YzFlMWE0NWM2ZjUiLCJpYXQiOjE3NDA3OTU4MDIsImV4cCI6MTc0MDgwMzAwMn0.1rsdq6VOl8MXOOeYBEa7NFb0ljWi-clmgfXZnTgv6Jo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/company/category/Alimentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"company",
+						"category",
+						"Alimentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CompaniesByASC",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxZTkzM2RmM2Y5YzFlMWE0NWM2ZjUiLCJpYXQiOjE3NDA3OTU4MDIsImV4cCI6MTc0MDgwMzAwMn0.1rsdq6VOl8MXOOeYBEa7NFb0ljWi-clmgfXZnTgv6Jo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/company/companies?order=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"company",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CompaniesByDESC",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxZTkzM2RmM2Y5YzFlMWE0NWM2ZjUiLCJpYXQiOjE3NDA3OTU4MDIsImV4cCI6MTc0MDgwMzAwMn0.1rsdq6VOl8MXOOeYBEa7NFb0ljWi-clmgfXZnTgv6Jo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/company/companies?order=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"company",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditCompany",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxZTkzM2RmM2Y5YzFlMWE0NWM2ZjUiLCJpYXQiOjE3NDA3OTg4MzAsImV4cCI6MTc0MDgwNjAzMH0.sBcczizd-YFXhrcizqhxX-XJfEqsqB5ftpCEjcXtmLI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameCompany\": \"MetaIA\",\r\n    \"descriptionCompany\": \"Es una ia la cual ayudara en el ambito de la naturaleza\",\r\n    \"impactLevel\": \"Bajo\",\r\n    \"yearsExperience\": 15,\r\n    \"businessCategory\": \"Salud\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/company/67c1ea748a64a1da20601f8a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"company",
+						"67c1ea748a64a1da20601f8a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxZTkzM2RmM2Y5YzFlMWE0NWM2ZjUiLCJpYXQiOjE3NDA4ODQ4NDksImV4cCI6MTc0MDg5MjA0OX0.8pQtrMpofodCYeTMPtk_gocuWOel1OBgYsBtP24LPvI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/interferSystem/v1/company/reporte",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"interferSystem",
+						"v1",
+						"company",
+						"reporte"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

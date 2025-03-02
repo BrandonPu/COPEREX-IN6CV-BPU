@@ -1,5 +1,9 @@
 import { response, request } from "express";
 import Company from "./company.model.js";
+import ExcelJS from "exceljs";
+import fs from "fs";
+import path from "path";
+import os from "os";
 import validateCategory from "../middlewares/validateCategory.js"
 
 export const getCompanies = async (req, res) => {
@@ -206,3 +210,51 @@ export const updateCompanyById = async (req, res) => {
         });
     }
 };
+
+export const generateReport = async (req, res) => {
+    try {
+      const companies = await Company.find();
+  
+      const workbook = new ExcelJS.Workbook();
+      const worksheet = workbook.addWorksheet('Empresas');
+  
+      worksheet.columns = [
+        { header: 'Nombre de la empresa', key: 'nameCompany', width: 30 },
+        { header: 'Descripción', key: 'descriptionCompany', width: 40 },
+        { header: 'Nivel de impacto', key: 'impactLevel', width: 20 },
+        { header: 'Años de experiencia', key: 'yearsExperience', width: 20 },
+        { header: 'Categoría de negocio', key: 'businessCategory', width: 30 },
+        { header: 'Estado', key: 'estado', width: 10 },
+        { header: 'Fecha de registro', key: 'createdAt', width: 20 },
+      ];
+  
+      companies.forEach(company => {
+        worksheet.addRow({
+          nameCompany: company.nameCompany,
+          descriptionCompany: company.descriptionCompany,
+          impactLevel: company.impactLevel,
+          yearsExperience: company.yearsExperience,
+          businessCategory: company.businessCategory,
+          estado: company.estado ? 'Activo' : 'Inactivo',
+          createdAt: company.createdAt.toLocaleString(), 
+        });
+      });
+  
+      const desktopPath = path.join(os.homedir(), 'Desktop', 'reporte_empresas.xlsx');
+  
+      if (fs.existsSync(desktopPath)) {
+        fs.unlinkSync(desktopPath); 
+      }
+  
+      await workbook.xlsx.writeFile(desktopPath);
+      console.log('Reporte generado exitosamente en el escritorio.');
+  
+      res.status(200).json({
+        message: 'Reporte generado y guardado en el escritorio.',
+      });
+  
+    } catch (error) {
+      console.error('Error al generar el reporte:', error);
+      res.status(500).json({ error: 'Error al generar el reporte' });
+    }
+  };

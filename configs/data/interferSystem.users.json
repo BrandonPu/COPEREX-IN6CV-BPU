@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "67c1e933df3f9c1e1a45c6f5"
+  },
+  "name": "Admin",
+  "username": "AdminSystem",
+  "email": "admin@system.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$DQubyiCsvwkG+EfcXHoDOQ$T/RoVZiUqgV+iGYCm3A7o6LM0E2iWEbYsxLUiqsNKuA",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:49:55.653Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:49:55.653Z"
+  }
+}]

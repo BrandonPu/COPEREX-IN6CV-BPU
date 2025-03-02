@@ -1,0 +1,425 @@
+[{
+  "_id": {
+    "$oid": "67c1ea748a64a1da20601f8a"
+  },
+  "nameCompany": "MetaIA",
+  "descriptionCompany": "Es una ia la cual ayudara en el ambito de la naturaleza",
+  "impactLevel": "Bajo",
+  "yearsExperience": 15,
+  "businessCategory": "Salud",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:55:16.222Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T03:22:36.314Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eafbcbb33242a456e986"
+  },
+  "nameCompany": "Nestlé",
+  "descriptionCompany": "Empresas dedicadas a la producción de alimentos y bebidas.",
+  "impactLevel": "Alto",
+  "yearsExperience": 150,
+  "businessCategory": "Alimentos",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:57:31.478Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:57:31.478Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb00cbb33242a456e98a"
+  },
+  "nameCompany": "Zara",
+  "descriptionCompany": "Moda global para hombres y mujeres.",
+  "impactLevel": "Medio",
+  "yearsExperience": 40,
+  "businessCategory": "Moda",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:57:36.668Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:57:36.668Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb08cbb33242a456e98e"
+  },
+  "nameCompany": "Cemex",
+  "descriptionCompany": "Líder en la industria de la construcción y materiales",
+  "impactLevel": "Alto",
+  "yearsExperience": 110,
+  "businessCategory": "Construccion",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:57:44.841Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:57:44.841Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb0ecbb33242a456e992"
+  },
+  "nameCompany": "SolarCity",
+  "descriptionCompany": "Soluciones de energía solar para el hogar y la industria.",
+  "impactLevel": "Alto",
+  "yearsExperience": 20,
+  "businessCategory": "Energia-renovable",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:57:50.616Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:57:50.616Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb13cbb33242a456e996"
+  },
+  "nameCompany": "TUI",
+  "descriptionCompany": "Agencia global de viajes y turismo.",
+  "impactLevel": "Medio",
+  "yearsExperience": 60,
+  "businessCategory": "Turismo",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:57:55.978Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:57:55.978Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb19cbb33242a456e99a"
+  },
+  "nameCompany": "Johnson & Johnson",
+  "descriptionCompany": "Productos y servicios de salud innovadores.",
+  "impactLevel": "Alto",
+  "yearsExperience": 130,
+  "businessCategory": "Salud",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:01.683Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:01.683Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb1fcbb33242a456e99e"
+  },
+  "nameCompany": "Berklee College of Music",
+  "descriptionCompany": "Universidad líder en educación musical.",
+  "impactLevel": "Medio",
+  "yearsExperience": 75,
+  "businessCategory": "Educacion",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:07.130Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:07.130Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb23cbb33242a456e9a2"
+  },
+  "nameCompany": "DHL",
+  "descriptionCompany": "Soluciones logísticas globales para empresas y consumidores.",
+  "impactLevel": "Alto",
+  "yearsExperience": 50,
+  "businessCategory": "Logistica",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:11.836Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:11.836Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb28cbb33242a456e9a6"
+  },
+  "nameCompany": "Artesanías del Valle",
+  "descriptionCompany": "Creación y venta de productos artesanales únicos.",
+  "impactLevel": "Bajo",
+  "yearsExperience": 15,
+  "businessCategory": "Artesania",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:16.375Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:16.375Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb2dcbb33242a456e9aa"
+  },
+  "nameCompany": "Apple",
+  "descriptionCompany": "Innovación tecnológica a través de dispositivos electrónicos.",
+  "impactLevel": "Alto",
+  "yearsExperience": 50,
+  "businessCategory": "Tecnologia",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:21.412Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:21.412Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb36cbb33242a456e9ae"
+  },
+  "nameCompany": "Pepsico",
+  "descriptionCompany": "Bebidas y alimentos globales para todos.",
+  "impactLevel": "Medio",
+  "yearsExperience": 85,
+  "businessCategory": "Alimentos",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:30.547Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:30.547Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb3bcbb33242a456e9b2"
+  },
+  "nameCompany": "H&M",
+  "descriptionCompany": "Moda accesible para todas las edades.",
+  "impactLevel": "Medio",
+  "yearsExperience": 75,
+  "businessCategory": "Moda",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:35.907Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:35.907Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb41cbb33242a456e9b6"
+  },
+  "nameCompany": "Vivienda & Cia",
+  "descriptionCompany": "Desarrollo inmobiliario y proyectos de vivienda.",
+  "impactLevel": "Medio",
+  "yearsExperience": 30,
+  "businessCategory": "Construccion",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:41.113Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:41.113Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb4ccbb33242a456e9ba"
+  },
+  "nameCompany": "Iberdrola",
+  "descriptionCompany": "Energía limpia y soluciones sostenibles.",
+  "impactLevel": "Alto",
+  "yearsExperience": 75,
+  "businessCategory": "Energia-renovable",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:52.400Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:52.400Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb52cbb33242a456e9be"
+  },
+  "nameCompany": "Expedia",
+  "descriptionCompany": "Plataforma global de reservas de viajes.",
+  "impactLevel": "Medio",
+  "yearsExperience": 25,
+  "businessCategory": "Turismo",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:58:58.765Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:58:58.765Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb58cbb33242a456e9c2"
+  },
+  "nameCompany": "Pfizer",
+  "descriptionCompany": "Desarrollo de medicamentos y vacunas innovadoras.",
+  "impactLevel": "Alto",
+  "yearsExperience": 170,
+  "businessCategory": "Salud",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:04.501Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:04.501Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb5ecbb33242a456e9c6"
+  },
+  "nameCompany": "Harvard University",
+  "descriptionCompany": "Institución educativa líder a nivel mundial.",
+  "impactLevel": "Alto",
+  "yearsExperience": 385,
+  "businessCategory": "Educacion",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:10.486Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:10.486Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb65cbb33242a456e9ca"
+  },
+  "nameCompany": "FedEx",
+  "descriptionCompany": "Soluciones logísticas de mensajería y envíos rápidos",
+  "impactLevel": "Alto",
+  "yearsExperience": 50,
+  "businessCategory": "Logistica",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:17.916Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:17.916Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb6acbb33242a456e9ce"
+  },
+  "nameCompany": "La Casa de la Artesanía",
+  "descriptionCompany": "Productos artesanales hechos a mano por artistas locales.",
+  "impactLevel": "Bajo",
+  "yearsExperience": 20,
+  "businessCategory": "Artesania",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:22.220Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:22.220Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb70cbb33242a456e9d2"
+  },
+  "nameCompany": "Microsoft",
+  "descriptionCompany": "Líder en software y soluciones tecnológicas.",
+  "impactLevel": "Alto",
+  "yearsExperience": 45,
+  "businessCategory": "Tecnologia",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:28.684Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:28.684Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb75cbb33242a456e9d6"
+  },
+  "nameCompany": "Grupo Bimbo",
+  "descriptionCompany": "Líder global en la industria de panificación y productos alimenticios.",
+  "impactLevel": "Alto",
+  "yearsExperience": 75,
+  "businessCategory": "Alimentos",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:33.461Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:33.461Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb79cbb33242a456e9da"
+  },
+  "nameCompany": "Uniqlo",
+  "descriptionCompany": "Moda moderna y accesible de origen japonés.",
+  "impactLevel": "Medio",
+  "yearsExperience": 40,
+  "businessCategory": "Moda",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:37.921Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:37.921Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb83cbb33242a456e9de"
+  },
+  "nameCompany": "Siemens Gamesa",
+  "descriptionCompany": "Soluciones tecnológicas para energías renovables.",
+  "impactLevel": "Alto",
+  "yearsExperience": 40,
+  "businessCategory": "Energia-renovable",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:47.570Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:47.570Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1eb8fcbb33242a456e9e2"
+  },
+  "nameCompany": "Booking.com",
+  "descriptionCompany": "Plataforma de reservas de alojamiento a nivel mundial",
+  "impactLevel": "Bajo",
+  "yearsExperience": 25,
+  "businessCategory": "Turismo",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-28T16:59:59.652Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:59:59.652Z"
+  }
+}]
